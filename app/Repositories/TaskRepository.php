@@ -31,7 +31,7 @@ class TaskRepository implements IRepository
 
             $now = Carbon::now();
             if ($data['due_date'] == 'Today') {
-                $condition = $condition->where('due_date', $now->format('Y-m-d H:i'));
+                $condition = $condition->where('due_date', $now->format('Y-m-d'));
             }
 
             if ($data['due_date'] == 'This Week') {
@@ -46,7 +46,7 @@ class TaskRepository implements IRepository
             }
 
             if ($data['due_date'] == 'Overdue') {
-                $condition = $condition->where('due_date', '>', $now->format('Y-m-d H:i'));
+                $condition = $condition->where('due_date', '>', $now->format('Y-m-d H:i'))->where('due_date', 'Pending');
             }
         }
 
