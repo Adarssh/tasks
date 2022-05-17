@@ -11,6 +11,8 @@ class SubTask extends Model
 {
     use HasFactory, SoftDeletes;
 
+    public $table = 'sub_tasks';
+
     protected $fillable = [
         'task_id', 'title', 'due_date', 'status'
     ];

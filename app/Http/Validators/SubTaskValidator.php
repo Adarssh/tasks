@@ -14,7 +14,7 @@ class SubTaskValidator extends ValidatorAbstract
      * @var string[][]
      */
     protected $paramRules = [
-        "task_id" => ["required", "int", "exists:tasks"],
+        "task_id" => ["required", "int", "exists:tasks,id"],
         "title" => ["required", "string", "max:100"],
         "due_date" => ["required", "date", "date_format:Y-m-d", "after:yesterday"],
         "status" => ["required", "in:Pending,Completed"],

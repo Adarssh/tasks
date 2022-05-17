@@ -57,7 +57,7 @@ class SubTaskController extends Controller
      *     @OA\Parameter(
      *         name="title",
      *         in="query",
-     *         description="Task title",
+     *         description="SubTask title",
      *         required=true,
      *         @OA\Schema(
      *             type="string",
@@ -66,7 +66,7 @@ class SubTaskController extends Controller
      *     @OA\Parameter(
      *         name="due_date",
      *         in="query",
-     *         description="Task Due Date",
+     *         description="SubTask Due Date",
      *         required=true,
      *         @OA\Schema(
      *             type="date",
@@ -75,7 +75,7 @@ class SubTaskController extends Controller
      *     @OA\Parameter(
      *         name="status",
      *         in="query",
-     *         description="Task status",
+     *         description="SubTask status",
      *         required=true,
      *         @OA\Schema(
      *             type="string",
@@ -92,7 +92,7 @@ class SubTaskController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Task Type not found"
+     *         description="SubTask Type not found"
      *     ),
      *     @OA\Response(
      *         response=405,
@@ -115,7 +115,7 @@ class SubTaskController extends Controller
      *     @OA\Parameter(
      *         name="id",
      *         in="path",
-     *         description="Task",
+     *         description="SubTask",
      *         required=true,
      *         @OA\Schema(
      *             type="integer",
@@ -131,7 +131,7 @@ class SubTaskController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Task not found"
+     *         description="SubTask not found"
      *     )
      * )
     */
@@ -145,7 +145,7 @@ class SubTaskController extends Controller
     /**
      * @OA\Put(
      *     path="/api/sub-tasks/{id}",
-     *     description="Update an existing Task",
+     *     description="Update an existing SubTask",
      *     tags={"SubTask_manager"},
      *     operationId="updateSubTask",
      *     @OA\Parameter(
@@ -160,7 +160,7 @@ class SubTaskController extends Controller
      *     @OA\Parameter(
      *         name="status",
      *         in="query",
-     *         description="Task status",
+     *         description="SubTask status",
      *         required=true,
      *         @OA\Schema(
      *             type="string",
@@ -177,7 +177,7 @@ class SubTaskController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Task not found / Task Type not found"
+     *         description="SubTask not found / SubTask Type not found"
      *     ),
      *     @OA\Response(
      *         response=405,
@@ -197,7 +197,7 @@ class SubTaskController extends Controller
     /**
      * @OA\Delete(
      *     path="/api/sub-tasks/{id}",
-     *     description="Deletes and existing Task",
+     *     description="Deletes and existing SubTask",
      *     tags={"SubTask_manager"},
      *     operationId="deleteTask",
      *     @OA\Parameter(
@@ -218,7 +218,7 @@ class SubTaskController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Task not found"
+     *         description="SubTask not found"
      *     )s
      * )
      */

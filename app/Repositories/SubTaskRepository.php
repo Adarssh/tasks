@@ -13,9 +13,9 @@ class SubTaskRepository implements IRepository
 {
     protected $SubTaskModel;
 
-    public function __construct(SubTask $SubTask)
+public function __construct(SubTask $SubTask)
     {
-        $this->SubSubTaskModel = $SubTask;
+        $this->SubTaskModel = $SubTask;
     }
 
     public function all(array $data): SubTaskCollection
@@ -64,13 +64,12 @@ class SubTaskRepository implements IRepository
     {
         extract($data);
 
-        $resource = $this->SubTaskModel;
+        $resource = new $this->SubTaskModel;
 
         $resource->task_id = $task_id;
         $resource->title = $title;
         $resource->due_date = $due_date;
         $resource->status = $status;
-
         if (!$resource->save()) {
             throw new DBException();
         }
